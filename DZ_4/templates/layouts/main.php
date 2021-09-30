@@ -1,13 +1,12 @@
-﻿<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title><?=$title?></title>
-<link rel="stylesheet" type="text/css" href="public/style.css"/>
-<?=$scripts?>
+    <meta charset="UTF-8">
+    <title><?=$title?></title>
+    <link rel="stylesheet" href="../css/style.css?<?=rand(1,22323)?>">
 </head>
 <body>
-<div id="main">
+<?=$menu?>
 <?=$content?>
-</div>
 </body>
 </html>
