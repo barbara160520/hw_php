@@ -23,14 +23,27 @@
 
 }*/
 
-function getCatalog() {
-    return getAssocResult("SELECT id, name,price,image FROM catalog");
+function getGoods() {
+    return getAssocResult("SELECT id, name,price,image FROM goods");
 }
 
 function getOneProduct($id) {
-    return getOneResult("SELECT name,price,image FROM catalog WHERE id = {$id}");
+    return getOneResult("SELECT * FROM goods WHERE id = {$id}");
 }
 
 function getProdFeedback($id) {
-    return getAssocResult("SELECT * FROM feedback WHERE prod_id = {$id}");
+   return getAssocResult("SELECT * FROM reviews WHERE id_product = {$id}");
+}
+
+function buyProd($id,$session){
+    executeSql("INSERT INTO `basket`(`goods_id`, `session_id`) VALUES ({$id},'{$session}')");
+}
+
+function doFromBasket($action, $id,$session)
+{
+    switch ($action) {
+        case "buy":
+            buyProd($id,$session);
+            return "success_buy";
+    }
 }

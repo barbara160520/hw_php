@@ -6,25 +6,21 @@ function getMenu(){
                 'name' => 'Главная',
                 'href' => "/"
             ],
-     /*       [
-                'name' => 'Каталог spa',
-                'href' => "/catalogspa"
-            ],*/
             [
                 'name' => 'Каталог',
-                'href' => "/catalogssr"
+                'href' => "/catalog"
+            ],
+          /*[
+                'name' => 'Каталог spa',
+                'href' => "/catalogspa"
             ],
             [
                 'name' => 'О нас',
                 'href' => "/about",
-            ],
+            ],*/
             [
                 'name' => 'Галерея',
                 'href' => "/gallery",
-            ],
-            [
-                'name' => 'Бугалтеря',
-                'href' => "/bux",
             ],
             [
                 'name' => 'Новости',
@@ -34,11 +30,18 @@ function getMenu(){
                 'name' => 'Отзывы',
                 'href' => '/feedback',
             ],
+            /*[
+                'name' => 'Бугалтеря',
+                'href' => "/bux",
+            ],
             [
                 'name' => 'Калькулятор',
                 'href' => '/calc',
+            ],*/
+            [
+                'name' => 'Корзина',
+                'href' => '/basket',
             ]
-
         ]
     ];
 }

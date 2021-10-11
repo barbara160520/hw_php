@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 function render($page, $params)
 {
     return renderTemplate(LAYOUTS_DIR . $params['layout'], [
@@ -13,18 +9,21 @@ function render($page, $params)
     );
 }
 
-
-//$params = ['menu' => 'код меню', 'catalog' => ['чай'], 'content' => 'Код подшаблона']
 function renderTemplate($page, $params = [])
 {
-    /*    foreach ($params as $key => $value) {
-            $$key = $value;
-        }*/
-
-    extract($params);
-
+    /*extract($params);
     ob_start();
     include TEMPLATES_DIR . $page . ".php";
+    return ob_get_clean();*/
+
+    ob_start();
+    extract($params);
+
+    $fileName = TEMPLATES_DIR . $page . ".php";
+    if (file_exists($fileName)) {
+        include $fileName;
+    }
+
     return ob_get_clean();
 }
 

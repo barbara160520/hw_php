@@ -23,7 +23,7 @@
 <?=$menu?>
 <div class="post_title">
 <h2>Моя галерея</h2>
-<p class="info"><?=$massege?></p>
+<p class="info"><?=$massege ?></p>
 </div>
 <div id='main' class="gallery">
 <?=$content?>

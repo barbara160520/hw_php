@@ -5,12 +5,14 @@ define('LAYOUTS_DIR', 'layouts/');
 
 /* DB config */
 define('HOST', 'localhost:3360');
-define('USER', 'test');
-define('PASS', '12345');
-define('DB', 'gb1');
+define('USER', 'root');
+define('PASS', 'root');
+define('DB', 'shop');
 
 //TODO попробуйте сделать эти пути абсолютными
 include ROOT . "/engine/redner.php";
+include ROOT . "/engine/auth.php";
+include ROOT . "/engine/basket.php";
 include ROOT . "/engine/db.php";
 include ROOT . "/engine/controller.php";
 include ROOT . "/models/feedback.php";
