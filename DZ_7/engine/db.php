@@ -28,7 +28,7 @@ function getAssocResult($sql)  {
 //WHERE id = 1
 function getOneResult($sql) {
     $result = @mysqli_query(getDb(), $sql) or die(mysqli_error(getDb()));
-    return mysqli_fetch_assoc($result);
+    return $result->fetch_assoc(); //mysqli_fetch_assoc($result);
 }
 
 function executeSql($sql) {
