@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3360
--- Время создания: Окт 15 2021 г., 17:12
+-- Время создания: Окт 25 2021 г., 10:04
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.1.33
 
@@ -43,7 +43,6 @@ INSERT INTO `basket` (`id`, `goods_id`, `session_id`, `users_id`) VALUES
 (15, 2, 'ienhprco82cu969ifo122b51ss6aahrl', 1),
 (18, 3, 'ienhprco82cu969ifo122b51ss6aahrl', 1),
 (23, 1, 'ienhprco82cu969ifo122b51ss6aahrl', 1),
-(24, 1, 'n6f97eoqdq2okfv46uvdcavmt7vlqroh', 1),
 (25, 2, '7kk07udpg3tr34vtg1rsg9om6cr679a7', 2),
 (26, 1, '7kk07udpg3tr34vtg1rsg9om6cr679a7', 2),
 (27, 1, 'ava6ed81ln0v61256jm6oghuc4b1tpg5', 2),
@@ -205,7 +204,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `login`, `pass`, `hash`, `role`) VALUES
 (1, 'admin', '$2y$10$2qMwxKY7nxxiFZFBP4yzrePkz5WVzb9F7dKO2xux5.XLbPLXkmBEC', '1572649475dfd0cabc8dc79.19440972', 1),
 (2, 'user', '$2y$10$2qMwxKY7nxxiFZFBP4yzrePkz5WVzb9F7dKO2xux5.XLbPLXkmBEC', '', 0),
-(3, 'poni', '1605', '', 0);
+(3, 'poni', '1605', '', 0),
+(4, 'Alex', '125', '125', 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -270,7 +270,7 @@ ALTER TABLE `basket`
 -- AUTO_INCREMENT для таблицы `goods`
 --
 ALTER TABLE `goods`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `images`
@@ -300,7 +300,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
