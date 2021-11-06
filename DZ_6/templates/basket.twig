@@ -1,0 +1,24 @@
+<h2>Корзина</h2>
+<span class='text'><?=$message?></span>
+<p class="summ">ИТОГО: {{summ | upper}} $</p>
+<div id='main' class='cart-list'>
+    {% if basket is not empty %}
+        Оформите заказ:
+        <form class='f-calc' action="/admin/add" method="post">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="text" name="phone" placeholder="Телефон">
+            <input type="submit" class='delete' value="Оформить заказ">
+        </form><br>
+        {% for value in basket %}
+            <div class='list-cart'>
+            <p class="text-cart">{{value.name}}
+            <img  src="/img/{{value.image}}">
+            <span class="cart-price">Цена:{{value.price}}$</span></p>
+                <a class='delete' href="/basket/delete/?id={{value.id}}">[X]</a>
+            </div>
+        {% endfor %}
+        <br>
+    {% else %}
+        <h2>Товаров нет</h2>
+    {% endif %}
+</div>
