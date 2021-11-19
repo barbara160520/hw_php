@@ -1,0 +1,19 @@
+<?php
+session_start();
+
+
+use app\engine\App;
+
+$config = include "../config/config.php";
+
+require_once '../vendor/autoload.php';
+
+try {
+App::call()->run($config);
+
+} catch (\PDOException $e) {
+    var_dump($e->getMessage());
+} catch (\Exception $e) {
+    var_dump($e);
+}
+
